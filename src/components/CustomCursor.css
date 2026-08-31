@@ -1,0 +1,109 @@
+/* ===========================
+   MAIN CURSOR
+=========================== */
+
+.custom-cursor{
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+    user-select: none;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 99999;
+
+    background: #00e5ff;
+
+    border: 2px solid rgba(255,255,255,.9);
+
+    box-shadow:
+        0 0 12px #00e5ff,
+        0 0 25px #00e5ff,
+        0 0 45px rgba(0,229,255,.8);
+
+    transition:
+        width .18s ease,
+        height .18s ease,
+        transform .08s linear,
+        background .25s ease,
+        border-color .25s ease;
+}
+
+/* ===========================
+   GLOW TRAIL
+=========================== */
+
+.cursor-trail{
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 70px;
+    height: 70px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+    user-select: none;
+
+    z-index: 99998;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,229,255,.25) 0%,
+            rgba(0,229,255,.12) 35%,
+            rgba(0,229,255,.05) 55%,
+            transparent 75%
+        );
+
+    filter: blur(14px);
+
+    transition:
+        transform .15s linear;
+}
+
+/* ===========================
+   CLICK EFFECT
+=========================== */
+
+.custom-cursor:active{
+
+    transform: translate(-50%, -50%) scale(.75);
+
+}
+
+/* ===========================
+   HOVER EFFECT
+=========================== */
+
+a:hover ~ .custom-cursor,
+button:hover ~ .custom-cursor{
+
+    width: 35px;
+    height: 35px;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    .custom-cursor,
+    .cursor-trail{
+        display:none;
+    }
+
+}
