@@ -123,6 +123,8 @@ function Projects() {
               <a
                 href="#"
                 className="live-btn"
+                onClick={(e) => e.preventDefault()}
+                aria-disabled="true"
               >
                 <FaExternalLinkAlt />
                 Live Demo
