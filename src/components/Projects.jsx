@@ -1,3 +1,4 @@
+
 import "../styles/projects.css";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
@@ -20,7 +21,6 @@ function Projects() {
       <div className="project-grid">
 
         {/* ================= Project 1 ================= */}
-        
 
         <div className="project-card" data-aos="zoom-in">
 
@@ -61,7 +61,9 @@ function Projects() {
               </a>
 
               <a
-                href="#"
+                href="https://ai-resume-screening-2xzf.onrender.com"
+                target="_blank"
+                rel="noreferrer"
                 className="live-btn"
               >
                 <FaExternalLinkAlt />
@@ -76,7 +78,11 @@ function Projects() {
 
         {/* ================= Project 2 ================= */}
 
-        <div className="project-card" data-aos="zoom-in" data-aos-delay="200">
+        <div
+          className="project-card"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
 
           <div className="project-image">
             <img
